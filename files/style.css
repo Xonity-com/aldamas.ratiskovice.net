@@ -1,0 +1,104 @@
+/* Základní styly pro tělo stránky */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Styly pro navigaci */
+.navbar {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: sticky; /* Zůstane nahoře při scrollování */
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+/* Styly pro sekce */
+.header, .section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+/* Styly pro úvodní sekci */
+/*.header {
+    background: #e2e2e2;
+}
+
+/* Styly pro úvodní sekci (header) */
+.header {
+    background-image: url('../files/images/1.Uvodni.jpg'); /* <--- Cesta k tvé fotce */
+    background-size: cover;       /* Fotka pokryje celou plochu */
+    background-position: center;  /* Fotka bude vycentrovaná */
+    background-repeat: no-repeat; /* Zabrání opakování fotky */
+    color: white;                 /* Text bude bílý pro lepší čitelnost na tmavém pozadí */
+    padding: 100px 20px;          /* Zvětší výšku sekce, aby byla fotka lépe vidět */
+    min-height: 400px;            /* Minimální výška sekce, aby bylo pozadí vidět */
+    display: flex;                /* Flexbox pro centrování obsahu */
+    flex-direction: column;       /* Obsah se zarovná pod sebe */
+    justify-content: flex-start;      /* Vertikální centrování obsahu */
+    align-items: center;          /* Horizontální centrování obsahu */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Stín textu pro lepší čitelnost */
+}
+
+/* Styly pro obrázky */
+img {
+    max-width: 100%; /* Zajišťuje, že obrázky nepřesáhnou šířku kontejneru */
+    height: auto;    /* Zachová poměr stran */
+    max-height: 500px; /* <--- NOVINKA: Omezíme maximální výšku obrázku */
+    display: block;  /* <--- NOVINKA: Zajišťuje, že margin: auto funguje pro centrování */
+    margin: 20px auto; /* Centrování obrázku a mezera nahoře/dole */
+    border-radius: 8px; /* Jemné zaoblení rohů */
+    object-fit: cover; /* <--- NOVINKA: Jak se obrázek vejde do kontejneru */
+}
+/* Styly pro kontejner na fotky (pro široké obrazovky) */
+.photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Styly pro fotky uvnitř kontejneru */
+.photo-container img {
+    /* Fotka zabere přibližně 45 % šířky,
+       takže se vedle sebe vejdou dvě */
+    width: 45%; 
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* --- Media Query pro MOBIL --- */
+@media (max-width: 600px) {
+    .photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-container img {
+        /* Na mobilu každá fotka zabere celou šířku */
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Responzivní styly pro menší obrazovky */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em; /* Zmenšení nadpisu na menších obrazovkách */
+    }
+}
