@@ -1,6 +1,6 @@
 /* Základní styly pro tělo stránky */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'EB Garamond', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -40,6 +40,7 @@ body {
 
 /* Styly pro úvodní sekci (header) */
 .header {
+    font-family: "Cinzel", serif;
     background-image: url('../files/images/1.Uvodni.jpg'); /* <--- Cesta k tvé fotce */
     background-size: cover;       /* Fotka pokryje celou plochu */
     background-position: center;  /* Fotka bude vycentrovaná */
